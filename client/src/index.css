@@ -1,0 +1,132 @@
+/* google font */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap'); */
+
+/* layout */
+:root {
+  --error: #e7195a;
+  --background: #121212;
+  --menu-bar: #181818;
+  --top-gradient: #404040;
+  --hover-gradient: #e0e0e0;
+  --bottom-gradient: #282828;
+  --primary-text: #1aac93;
+  --hover-text: #121212;
+  --secondary-text: #B3B3B3;
+}
+body {
+  background: var(--background) ;
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+header {
+  background:  var(--menu-bar) ;
+}
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a {
+  color: var(--primary-text);
+  text-decoration: none;
+}
+.pages{
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* homepage */
+.home {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 100px;
+}
+.prayer-details {
+  background: var(--bottom-gradient);
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+.prayer-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--primary-text);
+}
+.prayer-details p {
+  margin: 0;
+  font-size: 0.9em;
+  color: var(--primary-text);
+}
+.prayer-details span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #404040;
+  padding: 6px;
+  border-radius: 50%;
+}
+
+/* new prayer form */
+label, input {
+  display: block;
+}
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input:hover {
+  transition: 0.5s;
+  background-color: var(--hover-gradient);
+  color: var(--hover-text)
+}
+button, span {
+  background: var(--top-gradient);
+  border: 0;
+  color: var(--primary-text);
+  padding: 10px;
+  font-family: 'Roboto Mono', monospace;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover, span:hover {
+  background: var(--hover-gradient);
+  transition: 0.3s
+}
+
+
+
+div.error {
+  padding: 10px;
+  background: var(--secondary-text);
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+label, h3 {
+  color: var(--primary-text)
+}
+
+input {
+  background-color: var(--top-gradient);
+  color: var(--secondary-text);
+  font-family: 'Roboto Mono', monospace;
+}
+
+input.error {
+  border: 1px solid var(--error);
+}
