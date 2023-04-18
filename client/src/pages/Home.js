@@ -4,6 +4,7 @@ import { usePrayersContext } from "../hooks/usePrayersContext"
 // components
 import PrayerDetails from '../components/PrayerDetails'
 import PrayerForm from '../components/PrayerForm'
+import MyPrayerDetails from '../components/MyPrayerDetails'
 
 const Home = () => {
     const {prayers, dispatch} = usePrayersContext()
@@ -26,8 +27,11 @@ const Home = () => {
             <div className="prayers">
                 <h3 className="h3">My Prayers</h3>
                 {prayers && prayers.map((prayer) => (
-                    <PrayerDetails key={prayer._id} prayer={prayer}/>
+                    <MyPrayerDetails key={prayer._id} prayer={prayer}/>
                 ))}
+                {/* {prayers && prayers.map((prayer) => (
+                    <PrayerDetails key={prayer._id} prayer={prayer}/>
+                ))} */}
             </div>
             <PrayerForm />
         </div>

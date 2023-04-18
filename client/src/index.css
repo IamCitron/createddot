@@ -1,5 +1,6 @@
-/* google font */
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap'); */
+* {
+  /* border: 1px solid red; */
+}
 
 /* layout */
 :root {
@@ -42,10 +43,14 @@ header a {
 /* homepage */
 .home {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2fr 2fr;
   gap: 100px;
 }
+
 .prayer-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background: var(--bottom-gradient);
   border-radius: 4px;
   margin: 20px auto;
@@ -53,10 +58,23 @@ header a {
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
 }
+.prayer-details-contents {
+  background-color: var(--top-gradient);
+  border-radius: 4px;
+  margin-right: 20px;
+  padding: 5px;
+  flex-grow: 1;
+}
+.prayer-details-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
 .prayer-details h4 {
   margin: 0 0 10px 0;
   font-size: 1.2em;
   color: var(--primary-text);
+  text-decoration: underline;
 }
 .prayer-details p {
   margin: 0;
@@ -99,6 +117,21 @@ button, span {
   font-family: 'Roboto Mono', monospace;
   border-radius: 4px;
   cursor: pointer;
+}
+
+countbutton {
+  background: var(--top-gradient);
+  border: 0;
+  color: var(--primary-text);
+  padding: 10px;
+  font-family: 'Roboto Mono', monospace;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 24px;
+  width: 44px;
+  height: 44px;
 }
 
 button:hover, span:hover {
