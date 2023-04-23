@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { usePrayersContext } from "../hooks/usePrayersContext"
 
 // components
-import PrayerDetails from '../components/PrayerDetails'
+// import PrayerDetails from '../components/PrayerDetails'
 import PrayerForm from '../components/PrayerForm'
 import MyPrayerDetails from '../components/MyPrayerDetails'
 
@@ -29,9 +29,6 @@ const Home = () => {
                 {prayers && prayers.map((prayer) => (
                     <MyPrayerDetails key={prayer._id} prayer={prayer}/>
                 ))}
-                {/* {prayers && prayers.map((prayer) => (
-                    <PrayerDetails key={prayer._id} prayer={prayer}/>
-                ))} */}
             </div>
             <PrayerForm />
         </div>

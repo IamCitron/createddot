@@ -6,7 +6,7 @@ import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 const PrayerDetails = ({prayer}) => {
     const { dispatch } = usePrayersContext()
     
-    const handleClick = async () => {
+    const deletePrayer = async () => {
         const response = await fetch('/api/prayers/' + prayer._id, {
             method: 'DELETE'
         })
@@ -23,7 +23,7 @@ const PrayerDetails = ({prayer}) => {
             <p><strong>CONTENT: </strong>{prayer.content}</p>
             <p>TIME CREATED: {formatDistanceToNow(new Date(prayer.createdAt), { addSuffix: true })}</p>
             <br/>
-            <span className='material-symbols-outlined' onClick={handleClick}>delete</span>
+            <span className='material-symbols-outlined' onClick={deletePrayer}>delete</span>
         </div>
     )
 }

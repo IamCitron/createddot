@@ -119,7 +119,7 @@ button, span {
   cursor: pointer;
 }
 
-countbutton {
+.count_button {
   background: var(--top-gradient);
   border: 0;
   color: var(--primary-text);

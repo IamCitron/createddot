@@ -89,6 +89,30 @@ const updatePrayer = async (req, res) => {
     res.status(200).json(prayer)
 }
 
+// updatePrayerCount
+const updatePrayerCount = async (req, res) => {
+
+}
+
+// updatePrayerStatus
+const updatePrayerStatus = async (req, res) => {
+    const {id} = req.params
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(404).json({err: 'ID not valid'})
+    }
+
+    const prayer = await Prayer.findOneAndUpdate({_id: id}, {
+        ...req.body
+    })
+
+    if (!prayer) {
+        return res.status(404).json({err: 'No such prayer'})
+    }
+
+    res.status(200).json(prayer)
+}
+
 
 module.exports = {
     createPrayer,
@@ -96,4 +120,6 @@ module.exports = {
     getPrayer,
     deletePrayer,
     updatePrayer,
+    updatePrayerCount,
+    updatePrayerStatus,
 }

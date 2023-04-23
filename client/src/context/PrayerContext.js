@@ -9,10 +9,19 @@ export const prayersReducer = (state, action) => {
                 prayers: action.payload
             }
         case 'CREATE_PRAYER':
+            console.log(JSON.stringify(action))
             return {
                 prayers: [action.payload, ...state.prayers]
             }
         case 'DELETE_PRAYER':
+            return {
+                prayers: state.prayers.filter((p) => p._id !== action.payload._id )
+            }
+        case 'UPDATE_PRAYER_COUNT':
+            return {
+                prayers: state.prayers
+            }
+        case 'UPDATE_PRAYER_STATUS':
             return {
                 prayers: state.prayers.filter((p) => p._id !== action.payload._id )
             }

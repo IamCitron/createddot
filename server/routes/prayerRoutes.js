@@ -5,6 +5,8 @@ const {
     getPrayer,
     deletePrayer,
     updatePrayer,
+    updatePrayerCount,
+    updatePrayerStatus,
 } = require('../controllers/prayerController')
 
 const router = express.Router()
@@ -24,6 +26,11 @@ router.delete('/:id', deletePrayer)
 // PATCH prayer
 router.patch('/:id', updatePrayer)
 
+// updatePrayerCount
+router.patch('/:id', updatePrayerCount)
+
+// updatePrayerStatus
+router.patch('/:id', updatePrayerStatus)
 
 
 
